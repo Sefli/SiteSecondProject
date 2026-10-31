@@ -1,5 +1,5 @@
 :root {
-  /* colors (light theme */
+  /* colors - light theme */
   --bg: white;
   --bg-left: #f1f5f9;
   --text-main: #0f172a;
@@ -7,11 +7,11 @@
   --border-color: lightgray;
   --border-color-active: #2563eb;
   
-  /* colors (interactive) */
+  /* colors - interactive */
   --primary-color: #2563eb;
   --primary-color-hover: #1d4ed8;
 
-  /* colors (other interactives) */
+  /* colors - other interactives */
   --other-hover-bg: #eff6ff;
   --other-hover-border: #3b82f6;
   --other-hover-text: #1e3a8a;
@@ -82,24 +82,6 @@ body:has(#theme-toggle:checked) {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-}
-
-/* skip links */
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 1rem;
-  background: var(--primary-color);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  z-index: 100;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.skip-link:focus {
-  top: 1rem;
 }
 
 /* page container styles */
@@ -396,7 +378,7 @@ input:required:invalid:not(:placeholder-shown) {
   margin-top: 0.1rem;
 }
 
-/* hover and states / active and checked states */
+/* active and checked states */
 .selection-part:hover .part-content {
   background-color: var(--other-hover-bg);
   border-color: var(--other-hover-border);

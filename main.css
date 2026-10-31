@@ -1,0 +1,143 @@
+/* main page container layout */
+.main-page-container {
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 5rem 0;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.main-description {
+  font-size: 1.25rem;
+  color: var(--text-minor);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  max-width: 560px;
+}
+
+/* brand name and logo */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* actions settings */
+.actions {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 0.75rem;
+}
+
+.action-main {
+  flex: 1.8;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  font-size: 1.05rem;
+}
+
+.action-login {
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  font-size: 1.05rem;
+}
+
+.subtext {
+  font-size: 0.85rem;
+  color: var(--text-minor);
+  margin-bottom: 3rem;
+}
+
+/* features */
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-minor);
+  background-color: var(--bg-left);
+  padding: 0.75rem 1.25rem;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.dot {
+  color: var(--border-color);
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .main-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .actions {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .cta-main, .cta-login {
+    width: 100%;
+  }
+
+  .top-bar {
+    padding: 1.25rem 0;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 0.4rem;
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .dot {
+    display: none;
+    margin: 1rem;
+  }
+}
