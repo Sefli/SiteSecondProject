@@ -109,19 +109,6 @@ body:has(#theme-toggle:checked) {
   overflow-y: auto;
 }
 
-@media (max-width: 900px) {
-  .page-container {
-    flex-direction: column;
-  }
-  .left-section {
-    display: none;
-  }
-  .form-section {
-    max-width: 100%;
-    padding: 1.5rem;
-  }
-}
-
 /* brand name and logo*/
 .brand {
   display: flex;
@@ -155,12 +142,6 @@ body:has(#theme-toggle:checked) {
   display: none;
 }
 
-@media (max-width: 900px) {
-  .mobile-only {
-    display: flex;
-  }
-}
-
 .theme-toggle-button {
   display: inline-flex;
   background-color: var(--t-button-bg);
@@ -177,7 +158,7 @@ body:has(#theme-toggle:checked) {
   align-items: center;
   gap: 6px;
   padding: 4px 4px;
-  border-radius: 16px;
+  border-radius: 20px;
   font-size: 0.825rem;
   font-weight: 600;
   color: var(--text-minor);
@@ -283,12 +264,6 @@ body:has(#theme-toggle:checked) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-}
-
-@media (max-width: 600px) {
-  .fields-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 label, .fields-label {
@@ -462,7 +437,7 @@ input[type="file"] {
   color: var(--text-minor);
 }
 
-/* button and interactions */
+/* buttons */
 .form-actions {
   display: flex;
   gap: 1rem;
@@ -504,4 +479,28 @@ input[type="file"] {
 .button:focus-visible {
   outline: none;
   box-shadow: var(--focus-color);
+}
+
+/* mobyle styles */
+@media (max-width: 900px) {
+  .page-container {
+    flex-direction: column;
+  }
+  .left-section {
+    display: none;
+  }
+  .form-section {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .fields-grid {
+    grid-template-columns: 1fr;
+  }
 }
