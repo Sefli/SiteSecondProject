@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- theme toggle checkbox -->
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" aria-label="theme toggle">
+
+  <div class="page-container">
+
+    <!-- left side section -->
+    <aside class="left-section" aria-label="left main section">
+      <div class="brand">
+        <img src="images/logo.png.webp" alt="logo" class="brand-logo">
+        <span class="brand-name">Friendzone</span>
+      </div>
+
+     <div class="left-content">
+        <h1>Meet someone who gets you.</h1>
+        <p>Real people near you, matched on interests, values, and what you’re looking for.</p>
+      </div>
+
+      <div class="left-space">
+        <img src="images/aside-image1.jpg.avif" alt="image" class="left-image">
+      </div>
+
+    </aside>
+
+    <!-- main section -->
+    <main class="form-section">
+      <header class="top-bar">
+        <div class="brand mobile-only">
+          <img src="images/logo.png.webp" alt="logo" class="brand-logo">
+          <span class="brand-name">Friendzone</span>
+        </div>
+
+        <label for="theme-toggle" class="theme-toggle-button" role="button" aria-label="theme toggle">
+          <span class="theme-option light-opt">
+            ☀️ Light 
+          </span>
+          <span class="theme-option dark-opt">
+            🌙 Dark 
+          </span>
+        </label>
+      </header>
+
+      <section class="form-header">
+        <h2>Create an account</h2>
+        <p>Already registered? <a href="#">Log in here</a></p>
+      </section>
+
+      <form id="main-form" class="signup-form" action="#" method="POST" enctype="multipart/form-data">
+        
+        <!-- account information -->
+        <fieldset class="form-group">
+          <legend class="section-title">1. Account Information</legend>
+          
+          <div class="fields">
+            <label for="email" class="required">Email address</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com" required aria-describedby="email-help">
+            <span id="email-help" class="help-text">A confirmation link will be sent to this email</span>
+          </div>
+
+          <div class="fields">
+            <label for="password" class="required">Password</label>
+            <input type="password" id="password" name="password" minlength="8" required aria-describedby="password-help">
+            <span id="password-help" class="help-text">Must be at least 8 characters long</span>
+          </div>
+        </fieldset>
+
+        <!-- personal details -->
+        <fieldset class="form-group">
+          <legend class="section-title">2. Profile Details</legend>
+
+          <div class="fields-grid">
+            <div class="fields">
+              <label for="first-name" class="required">First Name</label>
+              <input type="text" id="first-name" name="first_name" required autocomplete="given-name">
+            </div>
+
+            <div class="fields">
+              <label for="last-name" class="required">Last Name</label>
+              <input type="text" id="last-name" name="last_name" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="fields-grid">
+            <div class="fields">
+              <label for="dob" class="required">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="fields">
+              <label for="gender" class="required">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="non-binary">Non-binary</option>
+                <option value="other">Other / Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="fields-grid">
+            <div class="fields">
+              <label for="country" class="required">Country</label>
+              <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="DK">Denmark</option>
+                <option value="SE">Sweden</option>
+                <option value="NO">Norway</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+
+            <div class="fields">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+45-(00)-00-00-00" autocomplete="tel">
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- person's interests -->
+        <fieldset class="form-group">
+          <legend class="section-title">3. Preferences & Interests</legend>
+
+          <div class="fields">
+            <span class="fields-label required">What are you looking for?</span>
+            <div class="selections" role="selections" aria-required="true">
+              <label class="selection-part">
+                <input type="radio" name="goal"value="friendship" required>
+                <span class="part-content">
+                  <strong>Friendship</strong>
+                  <small>Make new casual friends</small>
+                </span>
+              </label>
+
+              <label class="selection-part">
+                <input type="radio" name="goal" value="dating">
+                <span class="part-content">
+                  <strong>Dating</strong>
+                  <small>Find romantic connections</small>
+                </span>
+              </label>
+
+              <label class="selection-part">
+                <input type="radio" name="goal" value="networking">
+                <span class="part-content">
+                  <strong>Networking</strong>
+                  <small>Professional links</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="fields">
+            <label for="distance-range">Maximum Distance: <output id="range-val">30</output> km</label>
+            <input type="range" id="distance-range" name="distance" min="5" max="100" value="30" step="5" oninput="document.getElementById('range-val').value = this.value">
+            <div class="range-elements">
+              <span>5 km</span>
+              <span>100 km</span>
+            </div>
+          </div>
+
+          <div class="fields">
+            <span class="fields-label">Interests</span>
+            <div class="checkbox-grid">
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="sports"> Sports</label>
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="music"> Music</label>
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="gaming"> Gaming</label>
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="tech"> Technology</label>
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="art"> Art</label>
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="design"> Design</label>
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="travel"> Travel</label>
+              <label class="checkbox-set"><input type="checkbox" name="interests" value="nature"> Nature</label>
+
+            </div>
+          </div>
+
+          <div class="fields">
+            <label for="avatar">Profile Picture</label>
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+            <span class="help-text">JPG or PNG format</span>
+          </div>
+
+          <div class="fields">
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" rows="3" placeholder="Tell others a little bit about yourself..."></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label class="checkbox-container">
+            <input type="checkbox" name="terms" required>
+            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *</span>
+          </label>
+
+          <label class="checkbox-container">
+            <input type="checkbox" name="newsletter">
+            <span>Send me product updates and event invites via email</span>
+          </label>
+        </fieldset>
+
+        <!-- buttons -->
+        <div class="form-actions">
+          <button type="submit" class="button button-primary">Create Account</button>
+          <button type="reset" class="button button-secondary">Clear Form</button>
+        </div>
+
+      </form>
+    </main>
+  </div>
+
+</body>
+</html>
